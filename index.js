@@ -15,9 +15,18 @@ const app = express()
 
 
 app.use(
+    // cors({
+    //   credentials: true,
+    //   origin: process.env.NETLIFY_URL || "http://localhost:3000",
+    // })
+
+
     cors({
+      origin: [
+        process.env.NETLIFY_URL || "http://localhost:3000", 
+      ],
+      methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
-      origin: process.env.NETLIFY_URL || "http://localhost:3000",
     })
    );
 
