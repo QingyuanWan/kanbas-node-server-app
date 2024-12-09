@@ -9,6 +9,7 @@ import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 import mongoose from "mongoose";
 import session from "express-session";
 import "dotenv/config";
+import QuizRoutes from './Kanbas/Quizzes/routes.js';
 
 
 const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas-cs5610-fa24"
@@ -59,7 +60,7 @@ UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
-
+QuizRoutes(app);
 
 Lab5(app);
 
